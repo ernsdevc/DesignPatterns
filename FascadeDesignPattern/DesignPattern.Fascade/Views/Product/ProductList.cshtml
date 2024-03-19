@@ -1,0 +1,26 @@
+﻿@model List<DesignPattern.Fascade.DAL.Product>
+@{
+    ViewData["Title"] = "ProductList";
+    Layout = "~/Views/Shared/_FascadeLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h2>Ürün Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ürün Adı</th>
+        <th>Ürün Fiyatı</th>
+        <th>Ürün Stok Sayısı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductID</td>
+            <td>@item.ProductName</td>
+            <td>@item.Price</td>
+            <td>@item.Stock</td>
+        </tr>
+    }
+</table>
+<a href="/Product/AddNewProduct" class="btn btn-success">Yeni Ürün Girişi</a>
+

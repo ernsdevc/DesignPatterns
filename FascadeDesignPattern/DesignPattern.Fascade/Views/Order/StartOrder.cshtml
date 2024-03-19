@@ -1,0 +1,14 @@
+﻿@model DesignPattern.Fascade.DAL.Order
+@{
+    ViewData["Title"] = "StartOrder";
+    Layout = "~/Views/Shared/_FascadeLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h1>Sipariş Oluştur</h1>
+<form method="post">
+    <label>Müşteri ID</label>
+    <input type="text" class="form-control" asp-for="CustomerID" />
+    <br />
+    <button class="btn btn-warning">Sipariş Oluştur</button>
+</form>
+

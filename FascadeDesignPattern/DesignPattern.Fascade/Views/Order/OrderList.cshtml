@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "OrderList";
+    Layout = "~/Views/Shared/_FascadeLayout.cshtml";
+    var values = ViewBag.v;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h2>Sipariş Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Müşteri ID</th>
+        <th>Müşteri Adı</th>
+        <th>Müşteri Soyadı</th>
+        <th>Detay</th>
+    </tr>
+    @foreach (var item in values)
+    {
+        <tr>
+            <td>@item.OrderID</td>
+            <td>@item.CustomerID</td>
+            <td>@item.CustomerName</td>
+            <td>@item.CustomerSurname</td>
+            <td><a href="/Order/OrderDetail?orderID=@item.OrderID" class="btn btn-info">Detay</a></td>
+        </tr>
+    }
+</table>
+<a href="/Order/StartOrder" class="btn btn-success">Yeni Sipariş Girişi</a>
+

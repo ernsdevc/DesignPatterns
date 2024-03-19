@@ -1,0 +1,23 @@
+﻿@model DesignPattern.Fascade.DAL.Customer
+@{
+    ViewData["Title"] = "AddNewCustomer";
+    Layout = "~/Views/Shared/_FascadeLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h1>Yeni Müşteri Girişi</h1>
+<form method="post">
+    <label>Müşteri Adı</label>
+    <input type="text" class="form-control" asp-for="CustomerName" />
+    <br />
+    <label>Müşteri Soyadı</label>
+    <input type="text" class="form-control" asp-for="CustomerSurname" />
+    <br />
+    <label>Müşteri Adresi</label>
+    <input type="text" class="form-control" asp-for="Address" />
+    <br />
+    <label>Müşteri Şehri</label>
+    <input type="text" class="form-control" asp-for="City" />
+    <br />
+    <button class="btn btn-success">Müşteriyi Kaydet</button>
+</form>
+

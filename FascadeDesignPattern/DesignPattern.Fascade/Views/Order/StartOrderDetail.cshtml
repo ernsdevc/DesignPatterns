@@ -1,0 +1,25 @@
+﻿@model DesignPattern.Fascade.DAL.OrderDetail
+@{
+    ViewData["Title"] = "StartOrder";
+    Layout = "~/Views/Shared/_FascadeLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h1>Sipariş Detay</h1>
+<form method="post">
+    <label>Müşteri ID</label>
+    <input type="text" class="form-control" asp-for="CustomerID" readonly />
+    <br />
+    <label>Ürün ID</label>
+    <input type="text" class="form-control" asp-for="ProductID" />
+    <br />
+    <label>Sipariş ID</label>
+    <input type="text" class="form-control" asp-for="OrderID" readonly />
+    <br />
+    <label>Ürün Fiyatı</label>
+    <input type="text" class="form-control" asp-for="ProductPrice" />
+    <br />
+    <label>Ürün Adedi</label>
+    <input type="text" class="form-control" asp-for="ProductCount" />
+    <br />
+    <button class="btn btn-warning">Siparişi Tamamla</button>
+</form>
